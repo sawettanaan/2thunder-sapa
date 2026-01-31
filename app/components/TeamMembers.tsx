@@ -201,7 +201,7 @@ export default function TeamMembers() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-6"
+              className="relative w-full max-w-sm md:max-w-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-4 md:p-6"
             >
               <button
                 onClick={() => setSelectedMember(null)}
@@ -210,8 +210,8 @@ export default function TeamMembers() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="flex gap-6">
-                <div className="w-72 h-96 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+                <div className="w-full md:w-72 h-64 md:h-96 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
                   {selectedMember.image ? (
                     <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover" />
                   ) : (
@@ -221,7 +221,7 @@ export default function TeamMembers() {
                   )}
                 </div>
 
-                <div className="flex-1 flex flex-col justify-between">
+                <div className="flex-1 flex flex-col justify-between md:justify-start">
                   <div className="space-y-3">
                     <h2 className="text-2xl font-bold text-white">
                       {selectedMember.name.split(' ').slice(0, -1).join(' ')}
