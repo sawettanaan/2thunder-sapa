@@ -210,47 +210,49 @@ export default function TeamMembers() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="flex flex-col">
-                <div className="mb-4 w-full h-64 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
+              <div className="flex gap-6">
+                <div className="w-56 h-80 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
                   {selectedMember.image ? (
                     <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover" />
                   ) : (
-                    <span className="text-5xl font-bold text-white">
+                    <span className="text-6xl font-bold text-white">
                       {selectedMember.initials}
                     </span>
                   )}
                 </div>
 
-                <div className="space-y-2 mb-4">
-                  <h2 className="text-lg font-bold text-white">
-                    {selectedMember.name.split(' ').slice(0, -1).join(' ')}
-                  </h2>
-                  <h2 className="text-base font-bold bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent">
-                    {selectedMember.name.split(' ').pop()}
-                  </h2>
-                  <p className="text-sm text-yellow-300 font-semibold">{selectedMember.role}</p>
-                </div>
+                <div className="flex-1 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <h2 className="text-lg font-bold text-white">
+                      {selectedMember.name.split(' ').slice(0, -1).join(' ')}
+                    </h2>
+                    <h2 className="text-base font-bold bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent">
+                      {selectedMember.name.split(' ').pop()}
+                    </h2>
+                    <p className="text-sm text-yellow-300 font-semibold">{selectedMember.role}</p>
+                  </div>
 
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
-                    <GraduationCap className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                    <div className="min-w-0">
-                      <p className="text-gray-300 text-xs">ชั้นเรียน</p>
-                      <p className="text-white font-semibold text-sm">{selectedMember.class}</p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
+                      <GraduationCap className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-gray-300 text-xs">ชั้นเรียน</p>
+                        <p className="text-white font-semibold text-sm">{selectedMember.class}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
-                    <User className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                    <div className="min-w-0">
-                      <p className="text-gray-300 text-xs">แขนง</p>
-                      <p className="text-white font-semibold text-sm">{selectedMember.branch}</p>
+                    <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
+                      <User className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-gray-300 text-xs">แขนง</p>
+                        <p className="text-white font-semibold text-sm">{selectedMember.branch}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
-                    <div className="w-4 h-4 text-yellow-400 flex items-center justify-center text-xs font-bold flex-shrink-0">ID</div>
-                    <div className="min-w-0">
-                      <p className="text-gray-300 text-xs">เลขประจำตัว</p>
-                      <p className="text-white font-semibold text-sm">{selectedMember.studentId || 'ยังไม่ได้กรอก'}</p>
+                    <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
+                      <div className="w-4 h-4 text-yellow-400 flex items-center justify-center text-xs font-bold flex-shrink-0">ID</div>
+                      <div className="min-w-0">
+                        <p className="text-gray-300 text-xs">เลขประจำตัว</p>
+                        <p className="text-white font-semibold text-sm">{selectedMember.studentId || 'ยังไม่ได้กรอก'}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
