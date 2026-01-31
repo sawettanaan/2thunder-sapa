@@ -96,7 +96,7 @@ export default function Policies() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/10 border border-red-500/20 mb-6">
             <BookOpen className="w-4 h-4 text-red-400" />
-            <span className="text-red-300 text-sm font-medium">11 นโยบาย</span>
+            <span className="text-red-300 text-sm font-medium">8 นโยบาย</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             นโยบายของเรา

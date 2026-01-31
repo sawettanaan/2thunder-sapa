@@ -33,7 +33,7 @@ export default function Footer() {
                 <Zap className="w-7 h-7 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-red-300 to-rose-400 bg-clip-text text-transparent">
-                Thunder Party
+                สภา Thunder
               </span>
             </div>
             <p className="text-gray-400 leading-relaxed">
@@ -56,27 +56,13 @@ export default function Footer() {
             </h3>
             <div className="space-y-4">
               <a
-                href="tel:098-909-6562"
-                className="flex items-center gap-3 text-gray-400 hover:text-red-400 transition-colors group"
-              >
-                <Phone className="w-4 h-4 text-red-500/60 group-hover:text-red-400" />
-                <span>098-909-6562</span>
-              </a>
-              <a
-                href="mailto:sawettanaan@gmail.com"
-                className="flex items-center gap-3 text-gray-400 hover:text-red-400 transition-colors group"
-              >
-                <Mail className="w-4 h-4 text-red-500/60 group-hover:text-red-400" />
-                <span>sawettanaan@gmail.com</span>
-              </a>
-              <a
-                href="https://instagram.com/thunderparty"
+                href="https://www.instagram.com/thunder.swry/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-400 hover:text-red-400 transition-colors group"
               >
                 <Instagram className="w-4 h-4 text-red-500/60 group-hover:text-red-400" />
-                <span>@thunderparty</span>
+                <span>@thunder.swry</span>
               </a>
             </div>
           </motion.div>

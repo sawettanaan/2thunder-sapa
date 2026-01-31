@@ -5,7 +5,7 @@ import { Calendar, Megaphone, Vote, Rocket } from 'lucide-react';
 
 const timelineData = [
   {
-    date: '24 ม.ค. - 11 ก.พ. 2569',
+    date: '24 ม.ค. - 10 ก.พ. 2569',
     title: 'หาเสียง',
     description: 'นำเสนอนโยบายหน้าเสาธงและโรงอาหาร',
     icon: Megaphone,
@@ -14,7 +14,7 @@ const timelineData = [
   {
     date: '11 ก.พ. 2569',
     title: 'เลือกตั้ง 🗳️',
-    description: 'เข้าคูหา กาเบอร์พรรคทันเด้อ',
+    description: 'เข้าคูหา Thunder',
     icon: Vote,
     active: false,
   },
