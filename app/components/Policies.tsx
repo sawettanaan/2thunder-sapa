@@ -105,8 +105,8 @@ export default function Policies() {
       id="policies"
       className="py-24 md:py-32 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden"
     >
-      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -translate-y-1/2" />
+      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-yellow-600/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
@@ -115,9 +115,9 @@ export default function Policies() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 border border-blue-500/20 mb-6">
-            <BookOpen className="w-4 h-4 text-blue-400" />
-            <span className="text-blue-300 text-sm font-medium">11 นโยบาย</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/10 border border-red-500/20 mb-6">
+            <BookOpen className="w-4 h-4 text-red-400" />
+            <span className="text-red-300 text-sm font-medium">11 นโยบาย</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             นโยบายของเรา
@@ -143,10 +143,10 @@ export default function Policies() {
                 <motion.div
                   whileHover={{ scale: 1.05, y: -8 }}
                   whileTap={{ scale: 0.98 }}
-                  className="h-full p-8 rounded-2xl border border-gray-800 bg-gradient-to-br from-gray-900/40 to-gray-950/60 hover:border-blue-500/30 transition-all duration-300 backdrop-blur"
+                  className="h-full p-8 rounded-2xl border border-gray-800 bg-gradient-to-br from-gray-900/40 to-gray-950/60 hover:border-red-500/30 transition-all duration-300 backdrop-blur"
                 >
-                  <div className="mb-4 p-4 rounded-xl bg-blue-600/10 w-fit group-hover:bg-blue-600/20 transition-colors">
-                    <Icon className="w-6 h-6 text-blue-400" />
+                  <div className="mb-4 p-4 rounded-xl bg-red-600/10 w-fit group-hover:bg-red-600/20 transition-colors">
+                    <Icon className="w-6 h-6 text-red-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{policy.title}</h3>
                   <p className="text-gray-400 text-sm">{policy.shortDesc}</p>
@@ -185,10 +185,10 @@ export default function Policies() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="mb-4 p-4 rounded-xl bg-blue-600/10 w-fit">
+              <div className="mb-4 p-4 rounded-xl bg-red-600/10 w-fit">
                 {selectedPolicy && (() => {
                   const IconComponent = selectedPolicy.icon;
-                  return <IconComponent className="w-8 h-8 text-blue-400" />;
+                  return <IconComponent className="w-8 h-8 text-red-400" />;
                 })()}
               </div>
 
@@ -204,7 +204,7 @@ export default function Policies() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedPolicy(null)}
-                className="mt-8 w-full py-3 px-4 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
+                className="mt-8 w-full py-3 px-4 rounded-lg bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold hover:shadow-lg hover:shadow-red-500/50 transition-all duration-300"
               >
                 ปิด
               </motion.button>
