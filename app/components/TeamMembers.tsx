@@ -162,9 +162,12 @@ export default function TeamMembers() {
                     </span>
                   )}
                 </div>
-                <h3 className="text-sm md:text-base font-bold text-white mb-1 line-clamp-2">
-                  {member.name}
+                <h3 className="text-sm md:text-base font-bold text-white mb-0.5 leading-tight">
+                  {member.name.split(' ').slice(0, -1).join(' ')}
                 </h3>
+                <p className="text-xs md:text-sm font-semibold text-yellow-300 mb-2">
+                  {member.name.split(' ').pop()}
+                </p>
                 <p className="text-xs md:text-sm text-yellow-200 font-semibold mb-2">{member.role}</p>
                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-yellow-300 to-transparent mb-3" />
                 <p className="text-xs text-gray-100">🎓 {member.class}</p>
@@ -207,9 +210,14 @@ export default function TeamMembers() {
                 )}
               </div>
 
-              <h2 className="text-2xl font-bold text-white mb-2">
-                {selectedMember.name}
-              </h2>
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-0.5">
+                  {selectedMember.name.split(' ').slice(0, -1).join(' ')}
+                </h2>
+                <h2 className="text-lg font-bold bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent mb-4">
+                  {selectedMember.name.split(' ').pop()}
+                </h2>
+              </div>
               <p className="text-lg text-yellow-300 mb-6 font-semibold">{selectedMember.role}</p>
 
               <div className="space-y-3">
