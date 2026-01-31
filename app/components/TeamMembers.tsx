@@ -201,7 +201,7 @@ export default function TeamMembers() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-xs bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-5"
+              className="relative w-full max-w-sm bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-5"
             >
               <button
                 onClick={() => setSelectedMember(null)}
@@ -210,7 +210,7 @@ export default function TeamMembers() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="mb-6 p-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden min-h-96">
+              <div className="mb-6 p-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden h-64">
                 {selectedMember.image ? (
                   <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover rounded-2xl" />
                 ) : (
