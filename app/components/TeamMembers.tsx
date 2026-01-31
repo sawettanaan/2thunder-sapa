@@ -201,7 +201,7 @@ export default function TeamMembers() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-md bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8"
+              className="relative w-full max-w-sm bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-6"
             >
               <button
                 onClick={() => setSelectedMember(null)}
