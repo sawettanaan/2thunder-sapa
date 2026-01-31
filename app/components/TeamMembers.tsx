@@ -210,27 +210,25 @@ export default function TeamMembers() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="mb-6 p-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden h-64">
-                {selectedMember.image ? (
-                  <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover rounded-2xl" />
-                ) : (
-                  <span className="text-5xl font-bold text-white">
-                    {selectedMember.initials}
-                  </span>
-                )}
-              </div>
+              <div className="flex gap-4">
+                <div className="w-40 h-48 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
+                  {selectedMember.image ? (
+                    <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-5xl font-bold text-white">
+                      {selectedMember.initials}
+                    </span>
+                  )}
+                </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-0.5">
-                  {selectedMember.name.split(' ').slice(0, -1).join(' ')}
-                </h2>
-                <h2 className="text-lg font-bold bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent mb-4">
-                  {selectedMember.name.split(' ').pop()}
-                </h2>
-              </div>
-              <p className="text-lg text-yellow-300 mb-6 font-semibold">{selectedMember.role}</p>
-
-              <div className="space-y-3">
+                <div className="flex-1">
+                  <h2 className="text-xl font-bold text-white mb-0.5">
+                    {selectedMember.name.split(' ').slice(0, -1).join(' ')}
+                  </h2>
+                  <h2 className="text-lg font-bold bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent mb-2">
+                    {selectedMember.name.split(' ').pop()}
+                  </h2>
+                  <p className="text-base text-yellow-300 mb-4 font-semibold">{selectedMember.role}</p>
                 <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-xl border border-red-500/30">
                   <GraduationCap className="w-5 h-5 text-yellow-400" />
                   <div>
@@ -258,7 +256,7 @@ export default function TeamMembers() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedMember(null)}
-                className="mt-8 w-full py-3 px-4 rounded-lg bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold hover:shadow-lg hover:shadow-red-500/50 transition-all duration-300"
+                className="mt-4 w-full py-2 px-4 rounded-lg bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-red-500/50 transition-all duration-300"
               >
                 ปิด
               </motion.button>
