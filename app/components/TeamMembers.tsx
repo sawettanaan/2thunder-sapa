@@ -211,7 +211,7 @@ export default function TeamMembers() {
               </button>
 
               <div className="flex gap-4">
-                <div className="w-40 h-48 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
+                <div className="w-48 h-56 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
                   {selectedMember.image ? (
                     <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover" />
                   ) : (
