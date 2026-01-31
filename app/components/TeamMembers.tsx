@@ -14,6 +14,7 @@ const members = [
     image: '/pic/จันทร์แป้น.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const members = [
     image: '/pic/มินนี่.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const members = [
     image: '/pic/เกท.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 4,
@@ -44,6 +47,7 @@ const members = [
     image: '/pic/ชิ.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 5,
@@ -54,6 +58,7 @@ const members = [
     image: '/pic/เก่ง.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ const members = [
     image: '/pic/บอม.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 7,
@@ -74,6 +80,7 @@ const members = [
     image: '/pic/เศวต.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 8,
@@ -84,6 +91,7 @@ const members = [
     image: '/pic/ใหม่.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 9,
@@ -94,6 +102,7 @@ const members = [
     image: '/pic/กาตูน.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
   {
     id: 10,
@@ -104,6 +113,7 @@ const members = [
     image: '/pic/sh.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
+    studentId: '',
   },
 ];
 
@@ -233,6 +243,15 @@ export default function TeamMembers() {
                   <div>
                     <p className="text-gray-300 text-sm">แขนง</p>
                     <p className="text-white font-semibold">{selectedMember.branch}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-xl border border-red-500/30">
+                  <div className="w-5 h-5 text-yellow-400 flex items-center justify-center text-sm font-bold">เลขประตำตัว</div>
+                  <div>
+                    <p className="text-gray-300 text-sm">เลขประจำตัวนักเรียน</p>
+                    <p className="text-white font-semibold">{selectedMember.studentId || 'ยังไม่ได้กรอก'}</p>
+                  </div>
+                </div>
                   </div>
                 </div>
               </div>
