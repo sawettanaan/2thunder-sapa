@@ -200,9 +200,9 @@ export default function TeamMembers() {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="mb-6 p-6 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden min-h-80">
+              <div className="mb-6 p-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden min-h-96">
                 {selectedMember.image ? (
-                  <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-contain rounded-lg" />
+                  <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover rounded-2xl" />
                 ) : (
                   <span className="text-5xl font-bold text-white">
                     {selectedMember.initials}
