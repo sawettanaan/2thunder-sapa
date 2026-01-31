@@ -250,6 +250,7 @@ export default function TeamMembers() {
                     <p className="text-white font-semibold">{selectedMember.studentId || 'ยังไม่ได้กรอก'}</p>
                   </div>
                 </div>
+                </div>
               </div>
 
               <motion.button
