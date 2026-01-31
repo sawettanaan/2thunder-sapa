@@ -49,11 +49,9 @@ export default function Navbar() {
             onClick={() => scrollToSection('#home')}
           >
             <div className="relative">
-              <img 
-                src="/logo-school.png" 
-                alt="School Logo" 
-                className="w-14 h-14 rounded-xl shadow-lg shadow-red-500/50 object-cover"
-              />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center shadow-lg shadow-red-500/50">
+                <Zap className="w-8 h-8 text-white fill-white" />
+              </div>
               <div className="absolute inset-0 w-14 h-14 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 blur-lg opacity-30 animate-pulse" />
             </div>
             <div>
