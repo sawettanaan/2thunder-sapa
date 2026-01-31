@@ -201,7 +201,7 @@ export default function TeamMembers() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-sm bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-5"
+              className="relative w-full max-w-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-6"
             >
               <button
                 onClick={() => setSelectedMember(null)}
@@ -211,7 +211,7 @@ export default function TeamMembers() {
               </button>
 
               <div className="flex gap-6">
-                <div className="w-56 h-80 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
+                <div className="w-72 h-96 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-600 to-yellow-600 flex items-center justify-center shadow-lg overflow-hidden">
                   {selectedMember.image ? (
                     <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover" />
                   ) : (
