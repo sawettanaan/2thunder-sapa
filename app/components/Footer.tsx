@@ -106,7 +106,7 @@ export default function Footer() {
           <p className="text-gray-500 text-sm flex items-center justify-center gap-2 flex-wrap">
             สร้างด้วย{' '}
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-            {' '}โดยพรรคทันเด้อ • รวมเร็วแบบ Thunder{' '}
+            {' '}โดยพรรคทันเด้อ • รวดเร็วแบบ Thunder{' '}
             <Zap className="w-4 h-4 text-yellow-400" />
           </p>
         </motion.div>
