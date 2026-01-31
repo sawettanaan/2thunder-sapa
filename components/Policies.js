@@ -4,14 +4,11 @@ const policies = [
   { title: 'สภามาแนะ', desc: 'แนะนำกิจกรรมสำหรับ Portfolio' },
   { title: 'แวะมาบอกสภา', desc: 'ช่องทางปรึกษาแบบไม่ระบุตัวตน' },
   { title: 'สุขใดเล่าจะเท่าสุขา', desc: 'ส่งเสริมการดูแลห้องน้ำให้ปราศจากกลิ่น' },
-  { title: 'สานต่อรุ่นพี่', desc: 'สานต่อนะโยบายจากสภารุ่นก่อนๆ' },
+  { title: 'สานต่อรุ่นพี่', desc: 'สานต่อนโยบายจากสภารุ่นก่อนๆ' },
   { title: 'คอนเทนต์มีรางวัล', desc: 'แข่งขันคลิป TikTok' },
-  { title: 'ปลายสายปลายเสียง', desc: 'ดีเจและเปิดเพลงช่วงพัก' },
-  { title: 'แต่งตามสไตล์', desc: 'ชุดไปรเวทตามเทศกาล' },
-  { title: 'สนับสนุน E-sport', desc: 'จัดแข่งขันในโรงเรียนเพื่อหาตัวเเทนไปเเข่งนอกโรงเรียน' },
+  { title: 'สนับสนุน E-sport', desc: 'จัดแข่งขันในโรงเรียนเพื่อหาตัวแทนไปแข่งนอกโรงเรียน' },
   { title: 'ธนาคารข้อสอบเก่า', desc: 'รวบรวมแจกข้อสอบเก่าในการเข้ามหาลัย หรือ ม.4 ห้อง SMTE' },
   { title: 'Thunder Express', desc: 'ของหายพี่หา' },
-  { title: 'Support', desc: 'สนับสนุนทุกความสามารถ' },
 ];
 
 export default function Policies() {
@@ -21,7 +18,7 @@ export default function Policies() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/10 border border-red-500/20 mb-6">
             <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            <span className="text-red-300 text-sm font-medium">11 นโยบาย</span>
+            <span className="text-red-300 text-sm font-medium">8 นโยบาย</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">นโยบายของเรา</h2>
           <p className="text-gray-400 text-lg">คลิกเพื่อดูรายละเอียดแต่ละนโยบาย</p>
