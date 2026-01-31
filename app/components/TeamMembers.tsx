@@ -101,7 +101,7 @@ const members = [
     role: 'คณะกรรมการ',
     color: 'from-red-500 to-rose-600',
     initials: 'เชี',
-    image: '/pic/ภัทรวดี.jpg',
+    image: '/pic/sh.jpg',
     class: 'ม.4/5',
     branch: 'SMTE',
   },
