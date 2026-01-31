@@ -84,9 +84,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          โรงเรียนที่อบอุ่น พื้นที่ที่เข้าใจ
+          ทำงานรวดเร็ว
           <br />
-          <span className="text-red-300">เริ่มใหม่ไปด้วยกัน</span>
+          <span className="text-red-300">เหมือน Thunder</span>
         </motion.p>
 
         <motion.button

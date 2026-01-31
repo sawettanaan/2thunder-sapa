@@ -37,9 +37,9 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              โรงเรียนที่อบอุ่น พื้นที่ที่เข้าใจ
+              อยากเห็นโรงเรียนของเราดีขึ้น
               <br />
-              <span className="text-red-400/80 font-semibold">Make it Better.</span>
+              <span className="text-red-400/80 font-semibold">เลือก Thunder</span>
             </p>
           </motion.div>
 
