@@ -205,7 +205,7 @@ export default function TeamMembers() {
             >
               <button
                 onClick={() => setSelectedMember(null)}
-                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors"
+                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors z-20"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -246,9 +246,9 @@ export default function TeamMembers() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-xl border border-red-500/30">
-                  <div className="w-5 h-5 text-yellow-400 flex items-center justify-center text-sm font-bold">เลขประตำตัว</div>
+                  <div className="w-5 h-5 text-yellow-400 flex items-center justify-center text-sm font-bold"></div>
                   <div>
-                    <p className="text-gray-300 text-sm">เลขประจำตัวนักเรียน</p>
+                    <p className="text-gray-300 text-sm">เลขประจำตัว</p>
                     <p className="text-white font-semibold">{selectedMember.studentId || 'ยังไม่ได้กรอก'}</p>
                   </div>
                 </div>

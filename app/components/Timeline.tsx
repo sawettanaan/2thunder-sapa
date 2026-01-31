@@ -68,7 +68,7 @@ export default function Timeline() {
                   isEven ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >
-                <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 z-10">
+                <div className="absolute left-4 sm:left-1/2 sm:-translate-x-1/2 z-10">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 ${
