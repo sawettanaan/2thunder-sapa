@@ -41,10 +41,10 @@ const policies = [
   },
   {
     id: 4,
-    title: 'สานต่อนโยบาย',
+    title: 'สานต่อรุ่นพี่',
     icon: Target,
-    shortDesc: 'สืบต่อจากรุ่นพี่',
-    detail: 'สืบทอดและพัฒนานโยบายที่ดีจากรุ่นพี่เพื่อให้มีความต่อเนื่อง',
+    shortDesc: 'สานต่อนโยบายจากสถารุ่นก่อนๆ',
+    detail: 'สืบสานนโยบายต่อจากสถารุ่นพี่',
   },
   {
     id: 5,
@@ -186,9 +186,10 @@ export default function Policies() {
               </button>
 
               <div className="mb-4 p-4 rounded-xl bg-blue-600/10 w-fit">
-                {selectedPolicy && (
-                  <selectedPolicy.icon className="w-8 h-8 text-blue-400" />
-                )}
+                {selectedPolicy && (() => {
+                  const IconComponent = selectedPolicy.icon;
+                  return <IconComponent className="w-8 h-8 text-blue-400" />;
+                })()}
               </div>
 
               <h2 className="text-2xl font-bold text-white mb-4">
