@@ -222,36 +222,36 @@ export default function TeamMembers() {
                 </div>
 
                 <div className="flex-1 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <h2 className="text-lg font-bold text-white">
+                  <div className="space-y-3">
+                    <h2 className="text-2xl font-bold text-white">
                       {selectedMember.name.split(' ').slice(0, -1).join(' ')}
                     </h2>
-                    <h2 className="text-base font-bold bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent">
+                    <h2 className="text-xl font-bold bg-gradient-to-r from-yellow-300 to-red-300 bg-clip-text text-transparent">
                       {selectedMember.name.split(' ').pop()}
                     </h2>
-                    <p className="text-sm text-yellow-300 font-semibold">{selectedMember.role}</p>
+                    <p className="text-base text-yellow-300 font-semibold">{selectedMember.role}</p>
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
-                      <GraduationCap className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
+                      <GraduationCap className="w-5 h-5 text-yellow-400 flex-shrink-0" />
                       <div className="min-w-0">
-                        <p className="text-gray-300 text-xs">ชั้นเรียน</p>
-                        <p className="text-white font-semibold text-sm">{selectedMember.class}</p>
+                        <p className="text-gray-300 text-sm">ชั้นเรียน</p>
+                        <p className="text-white font-semibold text-base">{selectedMember.class}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
-                      <User className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
+                      <User className="w-5 h-5 text-yellow-400 flex-shrink-0" />
                       <div className="min-w-0">
-                        <p className="text-gray-300 text-xs">แขนง</p>
-                        <p className="text-white font-semibold text-sm">{selectedMember.branch}</p>
+                        <p className="text-gray-300 text-sm">แขนง</p>
+                        <p className="text-white font-semibold text-base">{selectedMember.branch}</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
-                      <div className="w-4 h-4 text-yellow-400 flex items-center justify-center text-xs font-bold flex-shrink-0">ID</div>
+                    <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-red-600/20 to-yellow-600/20 rounded-lg border border-red-500/30">
+                      <div className="w-5 h-5 text-yellow-400 flex items-center justify-center text-xs font-bold flex-shrink-0">ID</div>
                       <div className="min-w-0">
-                        <p className="text-gray-300 text-xs">เลขประจำตัว</p>
-                        <p className="text-white font-semibold text-sm">{selectedMember.studentId || 'ยังไม่ได้กรอก'}</p>
+                        <p className="text-gray-300 text-sm">เลขประจำตัว</p>
+                        <p className="text-white font-semibold text-base">{selectedMember.studentId || 'ยังไม่ได้กรอก'}</p>
                       </div>
                     </div>
                   </div>
