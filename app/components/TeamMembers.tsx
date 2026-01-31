@@ -27,7 +27,7 @@ const members = [
   },
   {
     id: 3,
-    name: 'นางสาวปภาวรินทร์ แก้วบุษทัน',
+    name: 'นางสาวปภาวรินทร์ แก้วบุญทัน',
     role: 'เลขานุการ',
     color: 'from-pink-500 to-red-500',
     initials: 'ก',
@@ -77,7 +77,7 @@ const members = [
   },
   {
     id: 8,
-    name: 'นางสาวธิดารัตน์ ตังขุนทด',
+    name: 'นางสาวธิดารัตน์ ตั่งขุนทด',
     role: 'คณะกรรมการ',
     color: 'from-rose-700 to-pink-700',
     initials: 'ให',
