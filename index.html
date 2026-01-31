@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thunder Party - เลือกตั้งสภานักเรียน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #000; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #f59e0b, #ef4444); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(to bottom, #fbbf24, #f87171); }
+        * { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-red-500/20 shadow-lg shadow-red-500/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer">
+                <div class="relative">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600 via-red-500 to-rose-600 flex items-center justify-center shadow-lg shadow-red-500/50">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                </div>
+                <span class="text-2xl font-bold bg-gradient-to-r from-red-400 via-red-300 to-rose-400 bg-clip-text text-transparent">Thunder</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-gray-300 hover:text-red-400 font-medium transition-colors">หน้าแรก</a>
+                <a href="#timeline" class="text-gray-300 hover:text-red-400 font-medium transition-colors">ไทม์ไลน์</a>
+                <a href="#policies" class="text-gray-300 hover:text-red-400 font-medium transition-colors">นโยบาย</a>
+                <a href="#members" class="text-gray-300 hover:text-red-400 font-medium transition-colors">ทีมงาน</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/pic/total.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-red-600/30 to-rose-600/30 border border-red-500/40 mb-8 backdrop-blur-sm">
+                <svg class="w-4 h-4 text-red-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span class="text-red-200 font-medium text-sm">พรรคทันเด้อ • เลือกตั้งสภานักเรียน</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-6">
+                <span class="text-white drop-shadow-[0_0_30px_rgba(239,68,68,0.5)]">Make it</span><br>
+                <span class="bg-gradient-to-r from-red-400 via-red-500 to-rose-600 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(239,68,68,0.8)]">Thunder</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                โรงเรียนที่อบอุ่น พื้นที่ที่เข้าใจ<br>
+                <span class="text-red-300">เริ่มใหม่ไปด้วยกัน</span>
+            </p>
+            <a href="#policies" class="inline-block px-10 py-4 rounded-full font-semibold text-lg bg-gradient-to-r from-red-600 via-red-500 to-rose-600 text-red-200 hover:text-white transition-all shadow-lg">ดูนโยบายของเรา</a>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-24 md:py-32 bg-gradient-to-b from-black via-gray-950 to-black relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/10 border border-red-500/20 mb-6">
+                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/></svg>
+                    <span class="text-red-300 text-sm font-medium">Timeline</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Election Timeline</h2>
+                <p class="text-gray-400 text-lg">เส้นทางสู่การเปลี่ยนแปลง</p>
+            </div>
+            <div class="space-y-12">
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center shadow-lg">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 11.08V12a10 10 0 11-5.93-9.14"/></svg>
+                    </div>
+                    <div class="ml-8">
+                        <span class="text-sm font-semibold text-red-400">24 ม.ค. - 11 ก.พ. 2569</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mt-2 mb-2">หาเสียง</h3>
+                        <p class="text-gray-400">นำเสนอนโยบายหน้าเสาธงและโรงอาหาร</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gray-800/80 border border-gray-700 flex items-center justify-center shadow-lg">
+                        <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="7" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+                    </div>
+                    <div class="ml-8">
+                        <span class="text-sm font-semibold text-gray-500">11 ก.พ. 2569</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mt-2 mb-2">เลือกตั้ง 🗳️</h3>
+                        <p class="text-gray-400">เข้าคูหา กาเบอร์พรรคทันเด้อ</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-16 h-16 rounded-2xl bg-gray-800/80 border border-gray-700 flex items-center justify-center shadow-lg">
+                        <svg class="w-7 h-7 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/><polyline points="7 11 12 16 17 11"/><line x1="12" y1="4" x2="12" y2="16"/></svg>
+                    </div>
+                    <div class="ml-8">
+                        <span class="text-sm font-semibold text-gray-500">12 ก.พ. 2569</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mt-2 mb-2">เริ่มการทำงาน</h3>
+                        <p class="text-gray-400">ประกาศผลและเริ่มดำเนินงานทันที</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section id="policies" class="py-24 md:py-32 bg-gradient-to-b from-black to-gray-950 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/10 border border-red-500/20 mb-6">
+                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span class="text-red-300 text-sm font-medium">11 นโยบาย</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">นโยบายของเรา</h2>
+                <p class="text-gray-400 text-lg">คลิกเพื่อดูรายละเอียดแต่ละนโยบาย</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Policy 1 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v2H4z"/><path d="M4 8h16v2H4z"/><path d="M4 12h16v2H4z"/><path d="M4 16h16v2H4z"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">สภามาแนะ</h3>
+                            <p class="text-gray-400 text-sm">แนะนำกิจกรรมสำหรับ Portfolio</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 2 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M17 8h.01"/><path d="M7 8h.01"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">แวะมาบอกสภา</h3>
+                            <p class="text-gray-400 text-sm">ช่องทางปรึกษาแบบไม่ระบุตัวตน</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 3 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 21V8a3 3 0 016 0v13"/><path d="M5 21h14"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">สุขใดเล่าจะเท่าสุขา</h3>
+                            <p class="text-gray-400 text-sm">ห้องน้ำสะอาด</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 4 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 20v-6"/><path d="M6 20v-4"/><path d="M18 20v-2"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">สานต่อนโยบาย</h3>
+                            <p class="text-gray-400 text-sm">สืบต่อจากรุ่นพี่</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 5 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">คอนเทนต์มีรางวัล</h3>
+                            <p class="text-gray-400 text-sm">แข่งขันคลิป TikTok</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 6 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 20v-6"/><path d="M6 20v-4"/><path d="M18 20v-2"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">ปลายสายปลายเสียง</h3>
+                            <p class="text-gray-400 text-sm">ดีเจและเปิดเพลงช่วงพัก</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 7 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M16 3v4M8 3v4"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">แต่งตามสไตล์</h3>
+                            <p class="text-gray-400 text-sm">ชุดไปรเวทตามเทศกาล</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 8 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10v4M18 10v4"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">สนับสนุน E-sport</h3>
+                            <p class="text-gray-400 text-sm">จัดแข่งขันในโรงเรียน</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 9 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M16 2v4M8 2v4"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">ธนาคารข้อสอบเก่า</h3>
+                            <p class="text-gray-400 text-sm">แจกข้อสอบเก่า</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 10 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11v2M18 11v2"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">Thunder Delivery</h3>
+                            <p class="text-gray-400 text-sm">ของหายพี่หา</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Policy 11 -->
+                <div class="group cursor-pointer p-5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-red-500/40 hover:bg-gray-900/80 transition-all duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600/20 to-rose-600/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-bold text-white mb-1 group-hover:text-red-300 transition-colors">Support</h3>
+                            <p class="text-gray-400 text-sm">สนับสนุนทุกความสามารถ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="members" class="py-24 md:py-32 bg-gradient-to-b from-gray-950 to-black relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-600/10 border border-red-500/20 mb-6">
+                    <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/></svg>
+                    <span class="text-red-300 text-sm font-medium">10 คน</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">ทีมงานของเรา</h2>
+                <p class="text-gray-400 text-lg">ทีมงาน 10 คนที่จะมาเปลี่ยนโรงเรียน</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                <!-- Member 1 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ธจ</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นางสาวธนภร จันทร์แป้น</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">ประธาน</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ธช</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นางสาวธนัชชา เถาโคตศรี</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">รองประธาน</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ปก</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นางสาวปภาวรินทร์ แก้วบุษทัน</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">เลขานุการ</p>
+                </div>
+                <!-- Member 4 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-red-600 to-rose-700 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ขบ</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นายเขตตะวัน บุญยิ้ม</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">คณะกรรมการ</p>
+                </div>
+                <!-- Member 5 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-rose-600 to-pink-600 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ณม</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นายณัฎฐ์ภัทร์ มะโนวรรณา</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">คณะกรรมการ</p>
+                </div>
+                <!-- Member 6 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-pink-600 to-red-600 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ทธ</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นายธนวุฒิ แวววับ</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">คณะกรรมการ</p>
+                </div>
+                <!-- Member 7 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-red-700 to-rose-800 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ศพ</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นายเศวตนันท์ พิพัฒตั้งสมบัติ</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">คณะกรรมการ</p>
+                </div>
+                <!-- Member 8 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-rose-700 to-pink-700 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ธต</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นางสาวธิดารัตน์ ตังขุนทด</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">คณะกรรมการ</p>
+                </div>
+                <!-- Member 9 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-pink-700 to-red-700 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ปร</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นางสาวประภาพร เรือทะมิน</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">คณะกรรมการ</p>
+                </div>
+                <!-- Member 10 -->
+                <div class="bg-gray-900/80 border border-gray-800 rounded-2xl p-4 text-center transition-all duration-300">
+                    <div class="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center mb-4 shadow-lg">
+                        <span class="text-2xl md:text-3xl font-bold text-white">ภฤ</span>
+                    </div>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">นางสาวภัทรวดี ฤกษ์มงคล</h3>
+                    <p class="text-xs md:text-sm text-red-400/80">คณะกรรมการ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-red-500/10 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 py-16 relative z-10">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-red-300 to-rose-400 bg-clip-text text-transparent">Thunder Party</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">โรงเรียนที่อบอุ่น พื้นที่ที่เข้าใจ<br><span class="text-red-400/80">Make it Better.</span></p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2"><span class="text-xl">📞</span> ข้อมูลติดต่อ</h3>
+                    <div class="space-y-3">
+                        <a href="tel:098-909-6562" class="flex items-center gap-3 text-gray-400 hover:text-red-400 transition-colors"><span>098-909-6562</span></a>
+                        <a href="mailto:sawettanaan@gmail.com" class="flex items-center gap-3 text-gray-400 hover:text-red-400 transition-colors"><span>sawettanaan@gmail.com</span></a>
+                        <a href="https://instagram.com/thunderparty" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-gray-400 hover:text-red-400 transition-colors"><span>@thunderparty</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2"><span class="text-xl">👨‍💻</span> ทีมผู้พัฒนา</h3>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center gap-3"><span>นายเศวตนันท์ พิพัฒตั้งสมบัติ</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent mb-8"></div>
+            <div class="text-center">
+                <p class="text-gray-500 text-sm flex items-center justify-center gap-2 flex-wrap">สร้างด้วย <span class="text-red-500">♥</span> โดยพรรคทันเด้อ • รวมเร็วแบบ Thunder ⚡</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+    <section id="timeline" class="section-padding">
+        <div class="container">
+            <div class="text-center header-box">
+                <h2>Election Timeline</h2>
+                <p>เส้นทางสู่การเปลี่ยนแปลง</p>
+            </div>
+
+            <div class="timeline-box">
+                <div class="timeline-line"></div>
+                <div class="timeline-item"></div>
+
+                <div class="timeline-item active">
+                    <div class="dot"></div>
+                    <div class="date">24 JAN- 11 FEB 2569</div>
+                    <div class="content">
+                        <h3>หาเสียง</h3>
+                        <p>นำเสนอนโยบายหน้าเสาธงและโรงอาหาร</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="date">11 FEB 2569</div>
+                    <div class="content">
+                        <h3>เลือกตั้ง🗳️</h3>
+                        <p>เข้าคูหา กาเบอร์นี้เหละ (เวลาไหนถึงไหนไม่รุ้)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="date">12 FEB</div>
+                    <div class="content">
+                        <h3>เริ่มการทำงาน</h3>
+                        <p>ประกาศผลและเริ่มดำเนินงานทันที</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="policies" class="section-padding bg-cream">
+        <div class="container">
+            <div class="text-center header-box">
+                <h2>นโยบายของเรา</h2>
+                <p>รวมทั่งสิ้น 11 นโยบาย</p>
+            </div>
+
+            <div class="policy-window">
+                <div class="policy-scroller policy-track" tabindex="0" aria-label="Policies list">
+                    <div class="policy-item" data-title="สภามาแนะ" data-detail="แจ้งกิจกรรมและค่ายสำหรับใส่ใน Portfolio เพื่อใช้ในการสมัครเรียนในระดับต่างๆ">1. สภามาแนะ — แจ้งกิจกรรมและค่ายสำหรับใส่ใน Portfolio เพื่อใช้ในการสมัครเรียนในระดับต่างๆ</div>
+                    <div class="policy-item" data-title="แวะมาบอกสภา" data-detail="เชื่อมต่ออินเทอร์เน็ตได้ทั่วโรงเรียน สนับสนุนการเรียนการสอนในยุคดิจิทัล">2. แวะมาบอกสภา — เปิดข่องทางให้คำปรึกษาแบบไม่ระบุตัวตนรวมถึงแจ้งปัญหาต่างๆถายในโรงเรียน</div>
+                    <div class="policy-item" data-title="สุขใดเล่าจะเท่าลุขา" data-detail="ห้องน้ำสะอาด ปราศจากกลิ่นไม่พึงประสงค์">3. สุขใดเล่าจะเท่าลุขา — ห้องน้ำสะอาด ปราศจากกลิ่นไม่พึงประสงค์</div>
+                    <div class="policy-item" data-title="สานต่อนโยบาย" data-detail="สานต่อนโยบายจากสภารุ่นพี่">4. สานต่อนโยบาย — สานต่อนโยบายจากสภารุ่นพี่</div>
+                    <div class="policy-item" data-title="คอนเทนต์มีรางวัล" data-detail="ทำคลิปวิดีโอผ่านช่องทาง แอปพลิเคชัน TikTok เพื่อแบ่งปันความสนุก และสร้างเนื้อหาที่เชื่อมโยงกับชีวิตในโรงเรียน ตัดสินจากยอดวิว, การกดใจ, ยอดแชร์, การเปิดโหวต">5. คอนเทนต์มีรางวัล — ทำคลิปวิดีโอผ่านช่องทาง แอปพลิเคชัน TikTok เพื่อแบ่งปันความสนุก และสร้างเนื้อหาที่เชื่อมโยงกับชีวิตในโรงเรียน ตัดสินจากยอดวิว, การกดใจ, ยอดแชร์, การเปิดโหวต</div>
+                    <div class="policy-item" data-title="ปลายสายปลายเสียง" data-detail="เปิดโอกาสให้นักเรียนได้นำเสนอข่าวสารการเรียนรู้โดยการมีดีเจฟอร์มทีมร่วมสมัคร และมีการเปิดเพลงช่วงพักจากคำขอของนักเรียน">6. ปลายสายปลายเสียง — เปิดโอกาสให้นักเรียนได้นำเสนอข่าวสารการเรียนรู้โดยการมีดีเจฟอร์มทีมร่วมสมัคร และมีการเปิดเพลงช่วงพักจากคำขอของนักเรียน</div>
+                    <div class="policy-item" data-title="แต่งตามสไตล์" data-detail="เปิดโอกาสให้แต่งชุดไปรเวทตามเทศกาลต่างๆ">7. แต่งตามสไตล์ — เปิดโอกาสให้แต่งชุดไปรเวทตามเทศกาลต่างๆ</div>
+                    <div class="policy-item" data-title="สนับสนุน E-sport" data-detail="มีการจัดการแข่งขันภายในโรงเรียนเพื่อคัดเลือกนักเรียนเเละนำไปแข่งขันภายนอก">8. สนับสนุน E-sport — มีการจัดการแข่งขันภายในโรงเรียนเพื่อคัดเลือกนักเรียนเเละนำไปแข่งขันภายนอก</div>
+                    <div class="policy-item" data-title="ธนาคารข้อสอบเก่า" data-detail="แจกข้อสอบเก่า เช่น A-level, t-pat, t-gat สอบเข้า ม.4 ห้องเรียนพิเศษ (smte)">9. ธนาคารข้อสอบเก่า — แจกข้อสอบเก่า เช่น A-level, t-pat, t-gat สอบเข้า ม.4 ห้องเรียนพิเศษ (smte)</div>
+                    <div class="policy-item" data-title="Thunder Delivery ของหายพี่หา" data-detail="รับความเห็นและข้อเสนอแนะจากนักเรียนอย่างปลอดภัยและไม่ระบุตัวตน">10. Thunder Delivery ของหายพี่หา — แจ้งของหายถายในโรงเรียนเพื่อให้พี่ๆสภานักเรียนตามหาของหาย โดยจำกัดเวลาแจ้งตั้งเเต่เวลา 15:45-17:00 น.</div>
+                    <div class="policy-item" data-title="Support" data-detail="สนับสนุนทุกความสามารถของนักเรียนทุกคน ทั้งด้าน วิชาการ ศิลป์ กีฬา มีการประชาสัมพันธ์ งานแข่งขันทุกประเภทผ่านเพจสภา">11. Support — สนับสนุนทุกความสามารถของนักเรียนทุกคน ทั้งด้าน วิชาการ ศิลป์ กีฬา มีการประชาสัมพันธ์ งานแข่งขันทุกประเภทผ่านเพจสภา </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="members" class="section-padding">
+        <div class="container">
+            <div class="text-center header-box">
+                <h2>ทีมงานของเรา</h2>
+                <p>ทีมงาน 10 คนที่จะมาเปลี่ยนโรงเรียน</p>
+            </div>
+
+            <div class="member-grid">
+                <div class="member-item" data-name="ประธาน" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99">
+                    <div class="pic"></div>
+                    <h3>ประธาน</h3>
+                    <p>นางสาวธนภร จันทร์แป้น</p>
+                </div>
+                <div class="member-item" data-name="รองประธาน" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%A3%E0%B8%AD%E0%B8%87+1">
+                    <div class="pic"></div>
+                    <h3>รองประธาน</h3>
+                    <p>นางสาวธนัชชา เถาโคตศรี</p>
+                </div>
+                <div class="member-item" data-name="เลขานุการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B9%80%E0%B8%A5%E0%B8%84%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B9%8C">
+                    <div class="pic"></div>
+                    <h3>เลขานุการ</h3>
+                    <p>นางสาวปภาวรินทร์ แก้วบุษทัน</p>
+                </div>
+                <div class="member-item" data-name="คณะกรรมการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%A3%E0%B8%AD%E0%B8%87+2">
+                    <div class="pic"></div>
+                    <h3>คณะกรรมการ</h3>
+                    <p>นายเขตตะวัน บุญยิ้ม</p>
+                </div>
+
+                <div class="member-item" data-name="คณะกรรมการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B9%80%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B4%E0%B8%81">
+                    <div class="pic"></div>
+                    <h3>คณะกรรมการ</h3>
+                    <p>นายณัฎฐ์ภัทร์ มะโนวรรณา</p>
+                </div>
+                <div class="member-item" data-name="คณะกรรมการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%B2%E0%B8%A3+1">
+                    <div class="pic"></div>
+                    <h3>คณะกรรมการ</h3>
+                    <p>นายธนวุฒิ แวววับ</p>
+                </div>
+                <div class="member-item" data-name="คณะกรรมการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%B2%E0%B8%A3+2">
+                    <div class="pic"></div>
+                    <h3>คณะกรรมการ</h3>
+                    <p>นายเศวตนันท์ พิพัฒตั้งสมบัติ</p>
+                </div>
+                <div class="member-item" data-name="คณะกรรมการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%A3%E0%B8%B1%E0%B8%93%E0%B8%98%E0%B9%8C">
+                    <div class="pic"></div>
+                    <h3>คณะกรรมการ</h3>
+                    <p>นางสาวธิดารัตน์ ตังขุนทด</p>
+                </div>
+                <div class="member-item" data-name="คณะกรรมการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A8%E0%B8%B4%E0%B8%A5%E0%B8%9E%E0%B9%8C">
+                    <div class="pic"></div>
+                    <h3>คณะกรรมการ</h3>
+                    <p>นางสาวประภาพร เรือทะมิน</p>
+                </div>
+                <div class="member-item" data-name="คณะกรรมการ" data-bio="" data-class="4/5" data-branch="SMTE" data-about="[เกี่ยวกับตัวเอง]" data-motivation="[เหตุผลที่สมัคร]" data-img="https://via.placeholder.com/400x520?text=%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88">
+                    <div class="pic"></div>
+                    <h3>คณะกรรมการ</h3>
+                    <p>นางสาวภัทรวดี ฤกษ์มงคล</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>⚡ Thunder Party</h2>
+                <p class="tagline">Make it Better.</p>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>📞 ข้อมูลติดต่อ</h3>
+                    <p>เบอร์โทร: <span class="editable">098-909-6562</span></p>
+                    <p>อีเมล: <span class="editable">sawettanaan@gmail.com</span></p>
+                    <p>IG: <span class="editable">@thunderparty</span></p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>👥 ทีมผู้พัฒนา</h3>
+                    <p><span class="editable">นายเศวตนันท์ พิพัฒตั้งสมบัติ</span></p>
+                    <p><span class="editable">BLACKBOX</span></p>
+                    <p><span class="editable">Gemini</span></p>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+            <p class="footer-credit">รวมเร็วแบบ Thunder</p>
+        </div>
+    </footer>
+
+    <!-- Member profile modal -->
+    <div id="memberModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" data-close></div>
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <button class="modal-close" aria-label="ปิด">✕</button>
+            <div class="modal-body">
+                <img src="" alt="รูปสมาชิก" class="modal-pic">
+                <div class="modal-info">
+                    <h3 class="modal-role">Role</h3>
+                    <h2 class="modal-name">Name</h2>
+                    <p class="modal-bio">Biography</p>
+                    <div class="modal-profile">
+                        <div class="profile-detail">
+                            <span class="profile-label">ชั้น:</span>
+                            <span class="modal-class">-</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="profile-label">สาขา:</span>
+                            <span class="modal-branch">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Policy detail modal -->
+    <div id="policyModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" data-close></div>
+        <div class="modal-content" role="dialog" aria-modal="true">
+            <button class="modal-close" aria-label="ปิด">✕</button>
+            <div class="policy-modal-body">
+                <h2 class="policy-modal-title">Title</h2>
+                <p class="policy-modal-detail">Detail</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced modal, avatars, and policy carousel (dots + autoplay)
+        (function(){
+            const modal = document.getElementById('memberModal');
+            const modalPic = modal.querySelector('.modal-pic');
+            const nameEl = modal.querySelector('.modal-name');
+            const roleEl = modal.querySelector('.modal-role');
+            const bioEl = modal.querySelector('.modal-bio');
+            const classEl = modal.querySelector('.modal-class');
+            const branchEl = modal.querySelector('.modal-branch');
+            const aboutEl = modal.querySelector('.modal-about');
+            const motivationEl = modal.querySelector('.modal-motivation');
+            const closeBtn = modal.querySelector('.modal-close');
+            const overlay = modal.querySelector('.modal-overlay');
+            let lastFocused = null;
+
+            function makeAvatarDataUrl(name, w=400, h=520){
+                const initials = (name||'').trim().slice(0,2) || '?';
+                const bg1 = '#D4A373';
+                const bg2 = '#C08E5D';
+                const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='0 0 ${w} ${h}'>
+                    <defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='${bg1}'/><stop offset='1' stop-color='${bg2}'/></linearGradient></defs>
+                    <rect width='100%' height='100%' fill='url(#g)' rx='16'/>
+                    <text x='50%' y='55%' font-family='Kanit, sans-serif' font-size='64' fill='#fff' text-anchor='middle' dominant-baseline='middle'>${initials}</text>
+                </svg>`;
+                return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+            }
+
+            function openModal(data, triggerEl){
+                lastFocused = triggerEl || document.activeElement;
+                const useAvatar = !data.img || data.img.includes('via.placeholder.com');
+                if(useAvatar){
+                    modalPic.src = makeAvatarDataUrl(data.name, 600, 780);
+                } else {
+                    modalPic.src = data.img;
+                }
+                modalPic.alt = data.name || 'member photo';
+                nameEl.textContent = data.name || '';
+                roleEl.textContent = data.role || '';
+                bioEl.textContent = data.bio || '';
+                classEl.textContent = data.class || 'ไม่ระบุ';
+                branchEl.textContent = data.branch || 'ไม่ระบุ';
+                aboutEl.textContent = data.about || 'ไม่ระบุ';
+                motivationEl.textContent = data.motivation || 'ไม่ระบุ';
+                modal.setAttribute('aria-hidden','false');
+                document.body.style.overflow = 'hidden';
+                closeBtn.focus();
+            }
+
+            function closeModal(){
+                modal.setAttribute('aria-hidden','true');
+                document.body.style.overflow = '';
+                if(lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+            }
+
+            function trapFocus(e){
+                if(modal.getAttribute('aria-hidden') === 'true') return;
+                const focusable = modal.querySelectorAll('button, [href], input, textarea, [tabindex]:not([tabindex="-1"])');
+                if(!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length -1];
+                if(e.key === 'Tab'){
+                    if(e.shiftKey){ if(document.activeElement === first){ e.preventDefault(); last.focus(); } }
+                    else { if(document.activeElement === last){ e.preventDefault(); first.focus(); } }
+                }
+            }
+
+            // Initialize member items: thumbnails, keyboard and click
+            document.querySelectorAll('.member-item').forEach(item => {
+                item.tabIndex = 0;
+                const picDiv = item.querySelector('.pic');
+                const imgUrl = item.dataset.img || '';
+                if(!imgUrl || imgUrl.includes('via.placeholder.com')){
+                    picDiv.style.backgroundImage = `url('${makeAvatarDataUrl(item.dataset.name,400,520)}')`;
+                } else {
+                    picDiv.style.backgroundImage = `url('${imgUrl}')`;
+                }
+                item.addEventListener('click', () => {
+                    const data = { 
+                        name: item.dataset.name, 
+                        role: item.dataset.role, 
+                        bio: item.dataset.bio, 
+                        class: item.dataset.class,
+                        branch: item.dataset.branch,
+                        about: item.dataset.about,
+                        motivation: item.dataset.motivation,
+                        img: item.dataset.img 
+                    };
+                    openModal(data, item);
+                });
+                item.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
+            });
+
+            // Modal events
+            closeBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', closeModal);
+            document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); trapFocus(e); });
+
+            // Policy modal: click to show details
+            const policyModal = document.getElementById('policyModal');
+            const policyTitle = policyModal.querySelector('.policy-modal-title');
+            const policyDetail = policyModal.querySelector('.policy-modal-detail');
+            const policyCloseBtn = policyModal.querySelector('.modal-close');
+            const policyOverlay = policyModal.querySelector('.modal-overlay');
+            let policyLastFocused = null;
+
+            function openPolicyModal(title, detail, triggerEl){
+                policyLastFocused = triggerEl || document.activeElement;
+                policyTitle.textContent = title || '';
+                policyDetail.textContent = detail || '';
+                policyModal.setAttribute('aria-hidden','false');
+                document.body.style.overflow = 'hidden';
+                policyCloseBtn.focus();
+            }
+
+            function closePolicyModal(){
+                policyModal.setAttribute('aria-hidden','true');
+                document.body.style.overflow = '';
+                if(policyLastFocused && typeof policyLastFocused.focus === 'function') policyLastFocused.focus();
+            }
+
+            document.querySelectorAll('.policy-item').forEach(item => {
+                item.tabIndex = 0;
+                item.style.cursor = 'pointer';
+                item.addEventListener('click', () => {
+                    const title = item.dataset.title || '';
+                    const detail = item.dataset.detail || '';
+                    openPolicyModal(title, detail, item);
+                });
+                item.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); } });
+            });
+
+            policyCloseBtn.addEventListener('click', closePolicyModal);
+            policyOverlay.addEventListener('click', closePolicyModal);
+            document.addEventListener('keydown', (e) => { if(policyModal.getAttribute('aria-hidden')==='false' && e.key === 'Escape') closePolicyModal(); });
+
+            // Scroll animation for timeline items
+            function animateOnScroll() {
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                const triggerBottom = window.innerHeight / 5 * 4;
+
+                timelineItems.forEach(item => {
+                    const itemTop = item.getBoundingClientRect().top;
+                    if (itemTop < triggerBottom) {
+                        item.classList.add('animate');
+                    } else {
+                        item.classList.remove('animate');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Initial check
+        })();
+    </script>
+
+</body>
+</html>

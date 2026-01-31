@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\เวปสถา\\\\school-policy-web\\\\app\" ; mv page\\.tsx page_old\\.tsx ; mv page_new\\.tsx page\\.tsx$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
